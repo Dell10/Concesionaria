@@ -46,12 +46,38 @@ public class VistaGerente extends javax.swing.JFrame {
         panelTranslucidoClientes5 = new org.edisoncor.gui.panel.PanelTranslucido();
         bttVenta = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
+        jPanelCrearEmpleado = new javax.swing.JPanel();
+        lblImagenEmpleado = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtUsuarioEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        txtContraseniaEmpleado = new org.edisoncor.gui.passwordField.PasswordFieldRoundImage();
+        txtConfContraseniaEmpleado = new org.edisoncor.gui.passwordField.PasswordFieldRoundImage();
+        jLabel9 = new javax.swing.JLabel();
+        txtClaveElectorEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        jLabel10 = new javax.swing.JLabel();
+        txtNombreEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        txtApPaternoEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        txtApMaternoEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        jLabel13 = new javax.swing.JLabel();
+        txtDireccionEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        txtTelefonoEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        jComboBoxPuestoEmpleado = new javax.swing.JComboBox();
+        txtSalarioEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        bttGuardarEmpleado = new org.edisoncor.gui.button.ButtonSeven();
         panelTranslucidoCarshop = new org.edisoncor.gui.panel.PanelTranslucido();
         lblImagenCarshop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(":::GERENTE:::");
+
+        jTabbedPane1.setFont(new java.awt.Font("MV Boli", 0, 16)); // NOI18N
 
         panelTranslucidoGeneral.setBackground(new java.awt.Color(255, 51, 51));
         panelTranslucidoGeneral.setColorPrimario(new java.awt.Color(153, 153, 153));
@@ -211,7 +237,7 @@ public class VistaGerente extends javax.swing.JFrame {
                 .addGroup(panelTranslucidoGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelTranslucidoClientes5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelTranslucidoClientes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -231,7 +257,223 @@ public class VistaGerente extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Inicio", jPanel1);
-        jTabbedPane1.addTab("Cuenta Gerente", jTabbedPane2);
+
+        lblImagenEmpleado.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel4.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel4.setText("Usuario:");
+
+        jLabel7.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel7.setText("Contraseña:");
+
+        jLabel8.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel8.setText("Confirmar:");
+
+        txtUsuarioEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtUsuarioEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioEmpleadoActionPerformed(evt);
+            }
+        });
+
+        txtContraseniaEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        txtConfContraseniaEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jLabel9.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel9.setText("Clave elector:");
+
+        txtClaveElectorEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtClaveElectorEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtClaveElectorEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel10.setText("Nombre:");
+
+        txtNombreEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtNombreEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombreEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel11.setText("Apellido paterno:");
+
+        jLabel12.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel12.setText("Apellido materno:");
+
+        txtApPaternoEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtApPaternoEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApPaternoEmpleadoActionPerformed(evt);
+            }
+        });
+
+        txtApMaternoEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtApMaternoEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApMaternoEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel13.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel13.setText("Direcciòn:");
+
+        txtDireccionEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtDireccionEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDireccionEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel14.setText("Telèfono:");
+
+        jLabel15.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel15.setText("Puesto:");
+
+        jLabel16.setFont(new java.awt.Font("Harrington", 0, 14)); // NOI18N
+        jLabel16.setText("Salario:");
+
+        txtTelefonoEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTelefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoEmpleadoActionPerformed(evt);
+            }
+        });
+
+        jComboBoxPuestoEmpleado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Comercio", "Financiamiento" }));
+
+        txtSalarioEmpleado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtSalarioEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSalarioEmpleadoActionPerformed(evt);
+            }
+        });
+
+        bttGuardarEmpleado.setText("Guardar");
+        bttGuardarEmpleado.setColorBrillo(new java.awt.Color(102, 0, 204));
+        bttGuardarEmpleado.setColorDeSombra(new java.awt.Color(255, 255, 204));
+        bttGuardarEmpleado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        javax.swing.GroupLayout jPanelCrearEmpleadoLayout = new javax.swing.GroupLayout(jPanelCrearEmpleado);
+        jPanelCrearEmpleado.setLayout(jPanelCrearEmpleadoLayout);
+        jPanelCrearEmpleadoLayout.setHorizontalGroup(
+            jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addGap(92, 92, 92)
+                        .addComponent(lblImagenEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(77, 77, 77)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(jLabel4))
+                        .addGap(26, 26, 26)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txtContraseniaEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtConfContraseniaEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtUsuarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10))
+                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDireccionEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                                        .addComponent(jComboBoxPuestoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel16))
+                                    .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtClaveElectorEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtApPaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtApMaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTelefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(29, 29, 29)
+                                .addComponent(txtSalarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCrearEmpleadoLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(242, 242, 242))
+        );
+        jPanelCrearEmpleadoLayout.setVerticalGroup(
+            jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addComponent(lblImagenEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel4)
+                            .addComponent(txtUsuarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(txtContraseniaEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(txtConfContraseniaEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)))
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtClaveElectorEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGap(16, 16, 16)
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addGap(54, 54, 54)
+                        .addComponent(jLabel12)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel13))
+                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                        .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtApPaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11))
+                        .addGap(18, 18, 18)
+                        .addComponent(txtApMaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtDireccionEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(17, 17, 17)
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(txtTelefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel16)
+                        .addComponent(txtSalarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jComboBoxPuestoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel15))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        jTabbedPane1.addTab("Crear empleado", jPanelCrearEmpleado);
 
         panelTranslucidoCarshop.setBackground(new java.awt.Color(255, 51, 51));
         panelTranslucidoCarshop.setColorPrimario(new java.awt.Color(153, 153, 153));
@@ -291,6 +533,38 @@ public class VistaGerente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bttClienteActionPerformed
 
+    private void txtUsuarioEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioEmpleadoActionPerformed
+
+    private void txtClaveElectorEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveElectorEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtClaveElectorEmpleadoActionPerformed
+
+    private void txtNombreEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreEmpleadoActionPerformed
+
+    private void txtApPaternoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApPaternoEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApPaternoEmpleadoActionPerformed
+
+    private void txtApMaternoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApMaternoEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApMaternoEmpleadoActionPerformed
+
+    private void txtDireccionEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDireccionEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDireccionEmpleadoActionPerformed
+
+    private void txtTelefonoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoEmpleadoActionPerformed
+
+    private void txtSalarioEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSalarioEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSalarioEmpleadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -330,22 +604,44 @@ public class VistaGerente extends javax.swing.JFrame {
     private javax.swing.JButton bttCliente;
     private javax.swing.JButton bttCompra;
     private javax.swing.JButton bttEmpleado;
+    private org.edisoncor.gui.button.ButtonSeven bttGuardarEmpleado;
     private javax.swing.JButton bttVenta;
+    private javax.swing.JComboBox jComboBoxPuestoEmpleado;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelCrearEmpleado;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
-    private javax.swing.JLabel lblImagen;
     private javax.swing.JLabel lblImagenCarshop;
+    private javax.swing.JLabel lblImagenEmpleado;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoCarshop;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoClientes;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoClientes2;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoClientes4;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoClientes5;
     private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoGeneral;
-    private org.edisoncor.gui.panel.PanelTranslucido panelTranslucidoGeneral1;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtApMaternoEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtApPaternoEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtClaveElectorEmpleado;
+    private org.edisoncor.gui.passwordField.PasswordFieldRoundImage txtConfContraseniaEmpleado;
+    private org.edisoncor.gui.passwordField.PasswordFieldRoundImage txtContraseniaEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtDireccionEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtNombreEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtSalarioEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtTelefonoEmpleado;
+    private org.edisoncor.gui.textField.TextFieldRoundImage txtUsuarioEmpleado;
     // End of variables declaration//GEN-END:variables
 }
