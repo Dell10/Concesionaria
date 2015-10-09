@@ -23,11 +23,11 @@ public class VistaLogin extends javax.swing.JFrame {
         panelTranslucido1 = new org.edisoncor.gui.panel.PanelTranslucido();
         txtContrasenia = new org.edisoncor.gui.passwordField.PasswordFieldRoundImage();
         txtNombreUsuario = new org.edisoncor.gui.textField.TextFieldRoundImage();
-        bttAceptarLogin = new org.edisoncor.gui.button.ButtonSeven();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         panelTranslucido2 = new org.edisoncor.gui.panel.PanelTranslucido();
         lblImagen = new javax.swing.JLabel();
+        bttAIniciarSesion = new org.edisoncor.gui.button.ButtonSeven();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(":::INGRESA USUARIO:::");
@@ -44,11 +44,6 @@ public class VistaLogin extends javax.swing.JFrame {
                 txtNombreUsuarioActionPerformed(evt);
             }
         });
-
-        bttAceptarLogin.setText("Aceptar");
-        bttAceptarLogin.setColorBrillo(new java.awt.Color(102, 0, 204));
-        bttAceptarLogin.setColorDeSombra(new java.awt.Color(255, 255, 204));
-        bttAceptarLogin.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Harlow Solid Italic", 0, 18)); // NOI18N
         jLabel1.setText("Contraseña:");
@@ -77,6 +72,17 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addGap(27, 27, 27))
         );
 
+        bttAIniciarSesion.setBackground(new java.awt.Color(153, 255, 51));
+        bttAIniciarSesion.setText("Aceptar");
+        bttAIniciarSesion.setColorBrillo(new java.awt.Color(102, 0, 204));
+        bttAIniciarSesion.setColorDeSombra(new java.awt.Color(255, 255, 204));
+        bttAIniciarSesion.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        bttAIniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttAIniciarSesionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelTranslucido1Layout = new javax.swing.GroupLayout(panelTranslucido1);
         panelTranslucido1.setLayout(panelTranslucido1Layout);
         panelTranslucido1Layout.setHorizontalGroup(
@@ -97,7 +103,7 @@ public class VistaLogin extends javax.swing.JFrame {
                         .addGap(78, 78, 78))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTranslucido1Layout.createSequentialGroup()
                         .addGroup(panelTranslucido1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(bttAceptarLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bttAIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(90, 90, 90))))
         );
@@ -113,9 +119,9 @@ public class VistaLogin extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(bttAceptarLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(bttAIniciarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -139,6 +145,10 @@ public class VistaLogin extends javax.swing.JFrame {
     private void txtNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreUsuarioActionPerformed
+
+    private void bttAIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttAIniciarSesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bttAIniciarSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,7 +189,8 @@ public class VistaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.edisoncor.gui.button.ButtonSeven bttAceptarLogin;
+    private org.edisoncor.gui.button.ButtonSeven bttAIniciarSesion;
+    private org.edisoncor.gui.button.ButtonSeven bttActualizarEmpleado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblImagen;

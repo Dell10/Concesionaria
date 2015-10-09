@@ -70,6 +70,7 @@ public class VistaGerente extends javax.swing.JFrame {
         txtTelefonoEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
         jComboBoxPuestoEmpleado = new javax.swing.JComboBox();
         txtSalarioEmpleado = new org.edisoncor.gui.textField.TextFieldRoundImage();
+        bttCancelarAgrEmpleado = new org.edisoncor.gui.button.ButtonSeven();
         bttGuardarEmpleado = new org.edisoncor.gui.button.ButtonSeven();
         panelTranslucidoCarshop = new org.edisoncor.gui.panel.PanelTranslucido();
         lblImagenCarshop = new javax.swing.JLabel();
@@ -237,7 +238,7 @@ public class VistaGerente extends javax.swing.JFrame {
                 .addGroup(panelTranslucidoGeneralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelTranslucidoClientes5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(panelTranslucidoClientes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -355,10 +356,27 @@ public class VistaGerente extends javax.swing.JFrame {
             }
         });
 
+        bttCancelarAgrEmpleado.setBackground(new java.awt.Color(255, 153, 153));
+        bttCancelarAgrEmpleado.setText("Cancelar");
+        bttCancelarAgrEmpleado.setColorBrillo(new java.awt.Color(102, 0, 204));
+        bttCancelarAgrEmpleado.setColorDeSombra(new java.awt.Color(255, 255, 204));
+        bttCancelarAgrEmpleado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        bttCancelarAgrEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttCancelarAgrEmpleadoActionPerformed(evt);
+            }
+        });
+
+        bttGuardarEmpleado.setBackground(new java.awt.Color(153, 255, 51));
         bttGuardarEmpleado.setText("Guardar");
         bttGuardarEmpleado.setColorBrillo(new java.awt.Color(102, 0, 204));
         bttGuardarEmpleado.setColorDeSombra(new java.awt.Color(255, 255, 204));
         bttGuardarEmpleado.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        bttGuardarEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttGuardarEmpleadoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelCrearEmpleadoLayout = new javax.swing.GroupLayout(jPanelCrearEmpleado);
         jPanelCrearEmpleado.setLayout(jPanelCrearEmpleadoLayout);
@@ -396,25 +414,27 @@ public class VistaGerente extends javax.swing.JFrame {
                         .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtDireccionEmpleado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
-                                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
-                                        .addComponent(jComboBoxPuestoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel16))
-                                    .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtClaveElectorEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtApPaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtApMaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(txtTelefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(29, 29, 29)
-                                .addComponent(txtSalarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(bttCancelarAgrEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                                        .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(jPanelCrearEmpleadoLayout.createSequentialGroup()
+                                                .addComponent(jComboBoxPuestoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel16))
+                                            .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtNombreEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtClaveElectorEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtApPaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtApMaternoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtTelefonoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addGap(29, 29, 29)
+                                        .addComponent(txtSalarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCrearEmpleadoLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(242, 242, 242))
         );
         jPanelCrearEmpleadoLayout.setVerticalGroup(
             jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -469,8 +489,11 @@ public class VistaGerente extends javax.swing.JFrame {
                         .addComponent(txtSalarioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jComboBoxPuestoEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel15))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelCrearEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bttGuardarEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bttCancelarAgrEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Crear empleado", jPanelCrearEmpleado);
@@ -565,6 +588,14 @@ public class VistaGerente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSalarioEmpleadoActionPerformed
 
+    private void bttCancelarAgrEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttCancelarAgrEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bttCancelarAgrEmpleadoActionPerformed
+
+    private void bttGuardarEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttGuardarEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bttGuardarEmpleadoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -601,6 +632,7 @@ public class VistaGerente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.edisoncor.gui.button.ButtonSeven bttCancelarAgrEmpleado;
     private javax.swing.JButton bttCliente;
     private javax.swing.JButton bttCompra;
     private javax.swing.JButton bttEmpleado;

@@ -40,10 +40,11 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         txtNombreCliente = new org.edisoncor.gui.textField.TextFieldRoundImage();
         jLabel17 = new javax.swing.JLabel();
         txtIngresoMensualCliente = new org.edisoncor.gui.textField.TextFieldRoundImage();
-        bttGuardarCliente = new org.edisoncor.gui.button.ButtonSeven();
+        bttCancelarAgrCliente = new org.edisoncor.gui.button.ButtonSeven();
+        bttAgregarCliente = new org.edisoncor.gui.button.ButtonSeven();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(":::GERENTE:::");
+        setTitle(":::AGREGAR CLIENTE:::");
 
         panelTranslucidoCarshop.setBackground(new java.awt.Color(255, 51, 51));
         panelTranslucidoCarshop.setColorPrimario(new java.awt.Color(153, 153, 153));
@@ -56,7 +57,7 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
             .addGroup(panelTranslucidoCarshopLayout.createSequentialGroup()
                 .addGap(191, 191, 191)
                 .addComponent(lblImagenCarshop, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelTranslucidoCarshopLayout.setVerticalGroup(
             panelTranslucidoCarshopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -150,13 +151,25 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
             }
         });
 
-        bttGuardarCliente.setText("Guardar");
-        bttGuardarCliente.setColorBrillo(new java.awt.Color(102, 0, 204));
-        bttGuardarCliente.setColorDeSombra(new java.awt.Color(255, 255, 204));
-        bttGuardarCliente.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        bttGuardarCliente.addActionListener(new java.awt.event.ActionListener() {
+        bttCancelarAgrCliente.setBackground(new java.awt.Color(255, 153, 153));
+        bttCancelarAgrCliente.setText("Cancelar");
+        bttCancelarAgrCliente.setColorBrillo(new java.awt.Color(102, 0, 204));
+        bttCancelarAgrCliente.setColorDeSombra(new java.awt.Color(255, 255, 204));
+        bttCancelarAgrCliente.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        bttCancelarAgrCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttGuardarClienteActionPerformed(evt);
+                bttCancelarAgrClienteActionPerformed(evt);
+            }
+        });
+
+        bttAgregarCliente.setBackground(new java.awt.Color(153, 255, 51));
+        bttAgregarCliente.setText("Guardar");
+        bttAgregarCliente.setColorBrillo(new java.awt.Color(102, 0, 204));
+        bttAgregarCliente.setColorDeSombra(new java.awt.Color(255, 255, 204));
+        bttAgregarCliente.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        bttAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bttAgregarClienteActionPerformed(evt);
             }
         });
 
@@ -166,31 +179,33 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
             panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelTranslucido2Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
-                .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel17))
-                .addGap(45, 45, 45)
-                .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtClaveElectorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtApPaternoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtApMaternoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDireccionGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtRfcCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
-                        .addComponent(txtTelefonoCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(txtIngresoMensualCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelTranslucido2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bttGuardarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(254, 254, 254))
+                .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelTranslucido2Layout.createSequentialGroup()
+                        .addComponent(bttCancelarAgrCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bttAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTranslucido2Layout.createSequentialGroup()
+                        .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel17))
+                        .addGap(45, 45, 45)
+                        .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtClaveElectorCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApPaternoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApMaternoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDireccionGerente, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(txtRfcCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                                .addComponent(txtTelefonoCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtIngresoMensualCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         panelTranslucido2Layout.setVerticalGroup(
             panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -231,7 +246,9 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
                     .addComponent(jLabel17)
                     .addComponent(txtIngresoMensualCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(bttGuardarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelTranslucido2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bttAgregarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bttCancelarAgrCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -240,7 +257,9 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(panelTranslucidoCarshop, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(panelTranslucido2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelTranslucido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,9 +304,13 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIngresoMensualClienteActionPerformed
 
-    private void bttGuardarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttGuardarClienteActionPerformed
+    private void bttCancelarAgrClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttCancelarAgrClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bttGuardarClienteActionPerformed
+    }//GEN-LAST:event_bttCancelarAgrClienteActionPerformed
+
+    private void bttAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttAgregarClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bttAgregarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -326,7 +349,8 @@ public class VistaAgregarCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.edisoncor.gui.button.ButtonSeven bttGuardarCliente;
+    private org.edisoncor.gui.button.ButtonSeven bttAgregarCliente;
+    private org.edisoncor.gui.button.ButtonSeven bttCancelarAgrCliente;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
