@@ -4,17 +4,24 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 public class ModeloConfiguracion implements Serializable{
     String usuario = "admin@carshop";
-    String password;
+    String contraseniaAdmin;
     String ip;
     String puerto;
     String usuarioBD;
-    String passwordBD;
-    public ModeloConfiguracion(String password, String ip, String puerto, String usuarioBD, String passwordBD) {
-        this.password = password;
+    String contraseniaBD;
+    public ModeloConfiguracion(String contraseniaAdmin, String ip, String puerto, String usuarioBD, String contraseniaBD) {
+//        System.out.println("------------------");
+//        System.out.println("contraadmin " + contraseniaAdmin);
+//        System.out.println("ip " + ip);
+//        System.out.println("puerto " + puerto);
+//        System.out.println("usuarioBD " + usuarioBD);
+//        System.out.println("contraseniaBD " + contraseniaBD);
+//        System.out.println("------------------");
+        this.contraseniaAdmin = contraseniaAdmin;
         this.ip = ip;
         this.puerto = puerto;
         this.usuarioBD = usuarioBD;
-        this.passwordBD = passwordBD;
+        this.contraseniaBD = contraseniaBD;
     }
     public String getUsuario() {
         return usuario;
@@ -22,11 +29,11 @@ public class ModeloConfiguracion implements Serializable{
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
-    public String getPassword() {
-        return password;
+    public String getContraseniaAdmin() {
+        return contraseniaAdmin;
     }
-    public void setPassword(String password) {
-        this.password = password;
+    public void setContraseniaAdmin(String contraseniaAdmin) {
+        this.contraseniaAdmin = contraseniaAdmin;
     }
     public String getIp() {
         return ip;
@@ -46,11 +53,11 @@ public class ModeloConfiguracion implements Serializable{
     public void setUsuarioBD(String usuarioBD) {
         this.usuarioBD = usuarioBD;
     }
-    public String getPasswordBD() {
-        return passwordBD;
+    public String getContraseniaBD() {
+        return contraseniaBD;
     }
-    public void setPasswordBD(String passwordBD) {
-        this.passwordBD = passwordBD;
+    public void setContraseniaBD(String contraseniadBD) {
+        this.contraseniaBD = contraseniadBD;
     }
     public void guardarConfigBD(){
         FileOutputStream fos = null;
@@ -61,7 +68,6 @@ public class ModeloConfiguracion implements Serializable{
             oos = new ObjectOutputStream(fos);
             oos.writeObject(this);
             System.out.println("Archivo escrito en ajustesBD.dat");
-            
         }
         catch (FileNotFoundException ex) {
             Logger.getLogger(ModeloConfiguracion.class.getName()).log(Level.SEVERE, null, ex);

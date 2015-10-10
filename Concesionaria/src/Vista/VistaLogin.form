@@ -75,8 +75,8 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="bttAIniciarSesion" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtContrasenia" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="bttIniciarSesion" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtContraseniaLogin" min="-2" pref="108" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
@@ -95,19 +95,22 @@
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txtContrasenia" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtContraseniaLogin" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
-                  <Component id="bttAIniciarSesion" min="-2" pref="29" max="-2" attributes="0"/>
+                  <Component id="bttIniciarSesion" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="org.edisoncor.gui.passwordField.PasswordFieldRoundImage" name="txtContrasenia">
+        <Component class="org.edisoncor.gui.passwordField.PasswordFieldRoundImage" name="txtContraseniaLogin">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="org.edisoncor.gui.textField.TextFieldRoundImage" name="txtNombreUsuario">
           <Properties>
@@ -116,6 +119,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombreUsuarioActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
@@ -171,7 +177,7 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="org.edisoncor.gui.button.ButtonSeven" name="bttAIniciarSesion">
+        <Component class="org.edisoncor.gui.button.ButtonSeven" name="bttIniciarSesion">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="ff" red="99" type="rgb"/>
@@ -188,8 +194,11 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttAIniciarSesionActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttIniciarSesionActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

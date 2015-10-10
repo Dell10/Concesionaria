@@ -3,15 +3,17 @@ import Vista.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 public class ConexionMySql {
     public static Connection getConexion(String ip, String puerto, String usuarioBD, String contraseniaBD){
         Connection cn = null;
+//        System.out.println("ip " + ip);
+//        System.out.println("puerto " + puerto);
+//        System.out.println("usuarioBD " + usuarioBD);
+//        System.out.println("contraseniaBD " + contraseniaBD);
         try{
-           Class.forName("com.mysql.jdbc.Driver");
-           cn = DriverManager.getConnection("jdbc:mysql://" + ip + ":" + puerto + "/micar", usuarioBD, contraseniaBD);
+            Class.forName("com.mysql.jdbc.Driver");
+            cn = DriverManager.getConnection("jdbc:mysql://" + ip + ":" + puerto + "/micar", usuarioBD, contraseniaBD);
             System.out.println("Conexion exitosa");
         }
         catch (SQLException ex) {
@@ -28,8 +30,10 @@ public class ConexionMySql {
     }
     public static boolean probarConexion(VistaConfiguracionBDD frame, String ip, String puerto, String usuarioBD, String contraseniaBD){
         Connection cn = null;
+        System.out.println("probarconexxion");
         try{
             Class.forName("com.mysql.jdbc.Driver");
+            System.out.println("probarconexxion");
             cn = DriverManager.getConnection("jdbc:mysql://" + ip + ":" + puerto + "/micar", usuarioBD, contraseniaBD);
             System.out.println("Conexion exitosa");
             return true;            

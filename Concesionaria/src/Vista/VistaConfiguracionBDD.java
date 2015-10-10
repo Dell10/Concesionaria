@@ -62,7 +62,7 @@ public class VistaConfiguracionBDD extends javax.swing.JFrame {
         lblImagenCarshop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(":::GERENTE:::");
+        setTitle(":::ADMINISTRADOR BDD:::");
 
         jTabbedPane1.setFont(new java.awt.Font("MV Boli", 0, 16)); // NOI18N
 
